@@ -16,6 +16,15 @@ exports.user_get = async (req, res) => {
   res.json({ users: users });
 };
 
+
+exports.one_milion = async(req, res) => {
+  for (let index = 0; index < 500000; index++) {
+    await User.create({name:req.body.name+`${index}`,password:req.body.password+`${index}`})
+  }
+  res.json({msg:'five milion row insert succesfully'})
+  
+}
+
 exports.user_delete = async (req, res) => {
   try {
     await User.destroy({

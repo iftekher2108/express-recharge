@@ -15,9 +15,9 @@ const User = db.define('users',{
             notNull: {
                 msg:'name field is required'
             },
-            isAlpha:{
-                msg:'name field is only letters'
-            },
+            // isAlpha:{
+            //     msg:'name field is only letters'
+            // },
         }
         
     },
