@@ -1,8 +1,7 @@
 const bcrypt = require("bcryptjs");
 const { generateToken } = require("../../utils/jwt");
-const User = require("../model/User");
+const User = require('../model/User');
 const { html_to_pdf }  = require("../../utils/html_to_pdf");
-const path = require('path')
 const fs = require('fs')
 
 // register function
@@ -65,6 +64,9 @@ exports.login = async (req, res) => {
   }
 };
 
+exports.file_upload = async(req, res) => {
+  res.json({msg:'file upload', file:req.file})
+}
 
 // logout function
 exports.logout = (req, res) => {

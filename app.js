@@ -6,12 +6,12 @@ const app = express();
 // app.use(limiter)
 
 
-  // json allow
-app.use(express.json())
-// urlencoded allow
-app.use(express.urlencoded({
-    extended: true
-}))
+//   // json allow
+// app.use(express.json())
+// // urlencoded allow
+// app.use(express.urlencoded({
+//     extended: true
+// }))
 
 
 // cors allow
@@ -30,8 +30,6 @@ const db = require('./Config/database')
 //   }).catch(err => {
 //     console.error('Database sync failed:', err);
 //   });
-
-
 
 // modular
 const userRoute = require('./Users/routes/routes')
