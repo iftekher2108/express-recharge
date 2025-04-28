@@ -6,12 +6,12 @@ const app = express();
 // app.use(limiter)
 
 
-//   // json allow
-// app.use(express.json())
-// // urlencoded allow
-// app.use(express.urlencoded({
-//     extended: true
-// }))
+  // json allow
+app.use(express.json())
+// urlencoded allow
+app.use(express.urlencoded({
+    extended: true
+}))
 
 
 // cors allow
