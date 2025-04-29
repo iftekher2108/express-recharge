@@ -78,8 +78,7 @@
   | `express-rate-limit`  | enhance security | Implemented express-rate-limit to prevent brute-force attacks by limiting repeated requests.| https://www.npmjs.com/package/express-rate-limit |
   | `multer`  | multipart/form-data | Implemented Multer middleware to upload and store files via HTTP requests.| https://www.npmjs.com/package/multer |
   | `mysql2`  | MySQL fast & secure | Used mysql2 to perform efficient database operations with promise and async/await support.| https://sidorares.github.io/node-mysql2/docs (if you use sequelize then not need) |
-  | `puppeteer`  | HTML to PDF | Used Puppeteer to automate browser tasks, such as web scraping and generating PDFs from HTML.| https://pptr.dev/guides/pdf-generation
-   https://pptr.dev/api/puppeteer.page.setcontent |
+  | `puppeteer`  | HTML to PDF | Used Puppeteer to automate browser tasks, such as web scraping and generating PDFs from HTML.| https://pptr.dev/guides/pdf-generation https://pptr.dev/api/puppeteer.page.setcontent |
   | `sequelize`  | ORM | Used Sequelize ORM to manage relational databases, perform CRUD operations and handle models, migrations, validation and relationship associations.| https://sequelize.org/docs/v6/getting-started/ |
 
   **Returns**: representing the create Web Application Full of Features.
