@@ -1,8 +1,8 @@
 const bcrypt = require("bcryptjs");
 const { generateToken } = require("../../utils/jwt");
-const User = require('../model/User');
-const { html_to_pdf }  = require("../../utils/html_to_pdf");
-const fs = require('fs')
+const User = require("../model/User");
+const { html_to_pdf } = require("../../utils/html_to_pdf");
+const fs = require("fs");
 
 // register function
 exports.register = async (req, res) => {
@@ -28,12 +28,10 @@ exports.register = async (req, res) => {
     const token = generateToken(user);
 
     // Respond with the token and user data (you can choose what to send back)
-    res
-      .status(201)
-      .json({
-        token,
-        user: { id: user.id, name: user.name, email: user.email },
-      });
+    res.status(201).json({
+      token,
+      user: { id: user.id, name: user.name, email: user.email },
+    });
   } catch (err) {
     console.error(err);
     res.status(500).json({ message: "Server error", error: err });
@@ -64,10 +62,6 @@ exports.login = async (req, res) => {
   }
 };
 
-exports.file_upload = async(req, res) => {
-  res.json({msg:'file upload', file:req.file})
-}
-
 // logout function
 exports.logout = (req, res) => {
   // On client: just delete token.
@@ -75,6 +69,13 @@ exports.logout = (req, res) => {
     message: "Logged out successfully. (Client should delete token)",
   });
 };
+
+
+// file upload
+exports.file_upload = async (req, res) => {
+  res.json({ msg: "file upload", file: req.file });
+};
+
 
 exports.dashboard = async (req, res) => {
   res.json({ msg: "Welcome to the dashboard", user: req });
@@ -98,60 +99,50 @@ exports.pdfgenerate = async (req, res) => {
   `;
 
   await html_to_pdf(html, res);
-
-};
-
-
-exports.post = async (req, res) => {
-  res.json({ msg: "this is post page" });
 };
 
 
 
+// exports.post = async (req, res) => {
+//   res.json({ msg: "this is post page" });
+// };
 
+// // user store function
+// exports.user_store = async (req, res) => {
+//   try {
+//     const user = await User.create(req.body);
+//     res.json(user);
+//   } catch (error) {
+//     res.status(400).json({ error: error.message });
+//   }
 
+//   // res.json({name:'iftekher mahmud',param:{id:req.params.id,name:req.query.name,age:req.query.age}})
+// };
 
+// // user data get function
+// exports.user_get = async (req, res) => {
+//   const users = await User.findAll();
+//   res.json({ users: users });
+// };
 
+// // user data delete by id function
+// exports.user_delete = async (req, res) => {
+//   try {
+//     await User.destroy({
+//       where: {
+//         id: req.params.id,
+//       },
+//     });
 
-
-// user store function
-exports.user_store = async (req, res) => {
-  try {
-    const user = await User.create(req.body);
-    res.json(user);
-  } catch (error) {
-    res.status(400).json({ error: error.message });
-  }
-
-  // res.json({name:'iftekher mahmud',param:{id:req.params.id,name:req.query.name,age:req.query.age}})
-};
-
-
-// user data get function
-exports.user_get = async (req, res) => {
-  const users = await User.findAll();
-  res.json({ users: users });
-};
-
-
-// user data delete by id function
-exports.user_delete = async (req, res) => {
-  try {
-    await User.destroy({
-      where: {
-        id: req.params.id,
-      },
-    });
-
-    res.json({ msg: `user is soft delete succesfully ${req.params.id}` });
-    // hard delete
-    //  await User.destroy({
-    //     where:{
-    //         id:req.params.id
-    //     },
-    //     force:true,
-    // })
-  } catch (error) {
-    res.status(400).json({ msg: `Something is wrong ${error}` });
-  }
-};
+//     res.json({ msg: `user is soft delete succesfully ${req.params.id}` });
+//     // hard delete
+//     //  await User.destroy({
+//     //     where:{
+//     //         id:req.params.id
+//     //     },
+//     //     force:true,
+//     // })
+//   } catch (error) {
+//     res.status(400).json({ msg: `Something is wrong ${error}` });
+//   }
+// };

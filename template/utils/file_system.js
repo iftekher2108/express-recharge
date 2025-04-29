@@ -4,10 +4,10 @@ const fs = require("fs");
 
 function upload_file(dir_path = "/") {
   const storage = multer.diskStorage({
-    destination:async function (req, file, cb) {
+    destination: async function (req, file, cb) {
       const dir = path.basename("public") + dir_path;
       if (!fs.existsSync(dir)) {
-      await fs.mkdirSync(dir, { recursive: true });
+        await fs.mkdirSync(dir, { recursive: true });
       }
       cb(null, dir);
     },
@@ -40,9 +40,8 @@ function upload_file(dir_path = "/") {
 
   return {
     single: upload.single("file"),
-    multiple: upload.array("files", 20) // for multiple files, limit to 20 files
+    multiple: upload.array("files", 20), // for multiple files, limit to 20 files
   };
-
-};
+}
 
 module.exports = upload_file;

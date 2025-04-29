@@ -16,16 +16,15 @@ router.post("/register", UserController.register);
 
 // html to pdf generate
 router.get("/pdfgenerate", UserController.pdfgenerate);
-
 router.post("/file-upload", upload("/").single, UserController.file_upload);
 
 // middleware before after piority matters
 groupRoutes(router, Auth, (admin) => {
-  admin.post("/user", UserController.user_store);
-  admin.get("/user", limiter, UserController.user_get);
-  admin.delete("/user/:id", UserController.user_delete);
   admin.get("/dashboard", UserController.dashboard);
   admin.get("/post", UserController.post);
+  // admin.post("/user", UserController.user_store);
+  // admin.get("/user", limiter, UserController.user_get);
+  // admin.delete("/user/:id", UserController.user_delete);
 });
 
 module.exports = router;

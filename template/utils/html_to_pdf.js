@@ -51,11 +51,9 @@ const html_to_pdf_file = async (html, res) => {
   }
 };
 
-
 // Function to convert HTML to PDF without saving file
 // This function will send the PDF directly in the response
 const html_to_pdf = async (html, res) => {
-
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
   try {
@@ -67,7 +65,7 @@ const html_to_pdf = async (html, res) => {
 
     console.log("PDF Generated Successfully!");
 
-   await res.set({
+    await res.set({
       "Content-Type": "application/pdf",
       "Content-Disposition": 'attachment; filename="html_to_pdf.pdf"',
       "Content-Length": pdf.length,
