@@ -1,6 +1,6 @@
 {
   "name": "@iftekher2108/express-recharge",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Create Express Recharge starter app",
   "bin": {
     "express-recharge": "./bin/index.js"
