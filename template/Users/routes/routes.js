@@ -21,7 +21,7 @@ router.post("/file-upload", upload("/").single, UserController.file_upload);
 // middleware before after piority matters
 groupRoutes(router, Auth, (admin) => {
   admin.get("/dashboard", UserController.dashboard);
-  admin.get("/post", UserController.post);
+  // admin.get("/post", UserController.post);
   // admin.post("/user", UserController.user_store);
   // admin.get("/user", limiter, UserController.user_get);
   // admin.delete("/user/:id", UserController.user_delete);
