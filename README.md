@@ -63,12 +63,12 @@
 
   ## 📚 API
   
-  This section documents the main functions and classes of the API. Each function is described with its parameters, return values, and examples for clarity.
+  This section documents the main features of the API. Each Package is described with its package name, return what it's work for clarity.
   
   
   Creates a new task with the specified details.
   
-  | Parameter  | Type         | Description    | Docs Link |
+  | Name  | Type         | Description    | Docs Link |
   | ---------- | ------       | ---------------------------------------------  | --------------------------------------------- |
   | `Express`  | Routing,APIs | Built the backend using Express.js for efficient routing and API handling.| https://expressjs.com/en/5x/api.html |
   | `cors` |Different origins | Implemented CORS to enable frontend-backend communication across different origins.| https://www.npmjs.com/package/cors |
