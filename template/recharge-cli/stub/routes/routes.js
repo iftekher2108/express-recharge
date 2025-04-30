@@ -1,14 +1,10 @@
 const express = require("express");
 const router = express.Router();
-const UserController = require("@modules/Users/controller/UserController");
+const {{moduleName}}Controller = require("@modules/{{moduleName}}/controller/{{moduleName}}Controller");
 const upload = require("@utils/file_system");
 
-router.get("/", (req, res) => {
-  res.json({ msg: "Welcome to the API System" });
-});
+
+// router.get("/{{moduleName}}", Controller.index);
 
 
-
-
-
-module.exports = router;
+module.exports = router ;

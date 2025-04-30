@@ -1,8 +1,8 @@
 const { DataTypes } = require("sequelize");
 const db = require("@config/database");
 
-const User = db.define(
-  "users",
+const {{moduleName}} = db.define(
+  "{{moduleName}}",
   {
     id: {
       type: DataTypes.BIGINT,
@@ -19,36 +19,36 @@ const User = db.define(
 
 // This creates the table if it doesn't exist
 // (and does nothing if it already exists)
-User.sync()
+{{moduleName}}.sync()
   .then(() => {
-    console.log("User Model init successfully!");
+    console.log("{{moduleName}} Model init successfully!");
   })
   .catch((err) => {
-    console.error("User sync failed:", err);
+    console.error("{{moduleName}} sync failed:", err);
   });
 
 
 //  This checks what is the current state of the table in the database
 // (which columns it has, what are their data types, etc), and then
 // performs the necessary changes in the table to make it match the model.
-// User.sync({ alter: true }).then(() => {
-//     console.log('User model altered successfully!')
+// {{moduleName}}.sync({ alter: true }).then(() => {
+//     console.log(`{{moduleName}} model altered successfully!`)
 // }) .catch((err) => {
-//     console.error("User sync failed:", err);
+//     console.error(`{{moduleName}} sync failed:`, err);
 // });
 
 // This creates the table, dropping it first if it already existed
-// User.sync({ force: true }).then(() => {
-//     console.log('User model force-fully Created successfully!')
+// {{moduleName}}.sync({ force: true }).then(() => {
+//     console.log(`{{moduleName}} model force-fully Created successfully!`)
 // }) .catch((err) => {
-//     console.error("User sync failed:", err);
+//     console.error(`{{moduleName}} sync failed:`, err);
 // });
 
-// // User model table drop with all Data
-// User.drop().then(() => {
-//     console.log('User model dropped!')
+// // {{moduleName}} model table drop with all Data
+// {{moduleName}}.drop().then(() => {
+//     console.log(`{{moduleName}} model dropped!`)
 // }) .catch((err) => {
-//     console.error("User sync failed:", err);
+//     console.error(`{{moduleName}} sync failed:`, err);
 // });
 
-module.exports = User;
+module.exports = {{moduleName}} ;

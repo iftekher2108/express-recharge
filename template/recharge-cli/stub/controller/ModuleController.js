@@ -1,5 +1,5 @@
-
-const User = require("@modules/Users/model/User");
+// Import the model
+const {{moduleName}} = require("@module/{{moduleName}}/model/{{moduleName}}");
 
 //  show all data
 exports.index = async (req, res) => {

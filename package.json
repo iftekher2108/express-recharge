@@ -48,6 +48,6 @@
     "recharge-automation-express-sequelize",
     "recharge-automation-express-puppeteer"
   ],
-  "author": "Iftekher Mahmud Pervez",
+  "author": "iftekher",
   "license": "MIT"
 }
