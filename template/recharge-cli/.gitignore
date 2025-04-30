@@ -1,0 +1,10 @@
+/node_modules
+/public/build
+/public/hot
+/public/storage
+.env
+/.fleet
+/.idea
+/.nova
+/.vscode
+/.zed

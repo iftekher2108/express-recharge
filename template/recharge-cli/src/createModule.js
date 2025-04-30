@@ -37,8 +37,8 @@ function copyAndReplace(from, to, replacements) {
 }
 
 module.exports = function createModule(name) {
-  const stubPath = path.resolve(__dirname, '../stub');
-  const targetPath = path.resolve(__dirname, '../../Modules', name);
+  const stubPath = path.resolve(__dirname, '../../../recharge-cli/stub');
+  const targetPath = path.resolve(__dirname, '../../../Modules', name);
 
   if (fs.existsSync(targetPath)) {
     console.log(`⚠️ Module '${name}' already exists.`);

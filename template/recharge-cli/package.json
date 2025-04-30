@@ -1,0 +1,17 @@
+{
+  "name": "recharge-cli",
+  "version": "1.0.4",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "recharge-cli"
+  ],
+  "author": "iftekher",
+  "license": "MIT",
+  "description": "recharge cli",
+  "dependencies": {
+    "minimist": "^1.2.8"
+  }
+}

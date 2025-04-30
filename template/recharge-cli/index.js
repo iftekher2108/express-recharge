@@ -6,9 +6,9 @@ module.exports = () => {
   const [command] = args._;
 
   switch (command) {
-    case "recharge":
+    case "help":
         console.log("Recharge CLI is running...");
-        console.log("Use 'recharge-cli help' for a list of commands.");
+        console.log("Use 'recharge help' for a list of commands.");
         console.log('Available commands: recharge-cli make:module --name="hello"');
         console.log("Available commands: recharge-cli make:controller --name=hello");
         console.log('Available commands: recharge-cli make:model --name="hello"')
@@ -26,8 +26,7 @@ module.exports = () => {
 
       break;
     case "make:module":
-      require(path.join(__dirname, "src/initModule"))(args);
-      console.log(`${path.join(__dirname, "src/initModule")}`);
+      require(path.join(__dirname, "./src/initModule"))(args);
       break;
     case "make:controller":
         // require(path.join(__dirname, "src/initController"))(args);

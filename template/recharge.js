@@ -1,3 +1,3 @@
 #!/usr/bin/env node
 
-require("./recharge-cli/index")();
+require("recharge-cli")();
