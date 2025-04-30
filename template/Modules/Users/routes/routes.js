@@ -1,10 +1,10 @@
 const express = require("express");
 const router = express.Router();
-const limiter = require("../../Config/rate-limiter");
-const UserController = require("../controller/UserController");
-const Auth = require("../../Middleware/Auth");
-const groupRoutes = require("../../utils/group_routes");
-const upload = require("../../utils/file_system");
+const limiter = require("@config/rate-limiter");
+const UserController = require("@modules/Users/controller/UserController");
+const Auth = require("@middleware/Auth");
+const groupRoutes = require("@utils/group_routes");
+const upload = require("@utils/file_system");
 
 router.get("/", (req, res) => {
   res.json({ msg: "Welcome to the API System" });

@@ -1,6 +1,6 @@
 const jwt = require("jsonwebtoken");
-const User = require("../Users/model/User");
-const { verifyToken } = require("../utils/jwt");
+const User = require("@modules/Users/model/User");
+const { verifyToken } = require("@utils/jwt");
 
 const Auth = async (req, res, next) => {
   const token = req.headers["authorization"]?.split(" ")[1]; // Get token from the header (Authorization: Bearer <token>)

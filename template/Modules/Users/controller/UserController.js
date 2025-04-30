@@ -1,7 +1,7 @@
 const bcrypt = require("bcryptjs");
-const { generateToken } = require("../../utils/jwt");
-const User = require("../model/User");
-const { html_to_pdf } = require("../../utils/html_to_pdf");
+const { generateToken } = require("@utils/jwt");
+const User = require("@modules/Users/model/User");
+const { html_to_pdf } = require("@utils/html_to_pdf");
 const fs = require("fs");
 
 // register function

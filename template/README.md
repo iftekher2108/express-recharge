@@ -16,16 +16,23 @@
   
   ## 🎯 Overview
   
-  Provide a concise description of what your software project does and its main objectives. For example:
+  Provide a concise description of what software project does and its main objectives. For fast Creating web application with awesome Eco-system.
   
-  "This project is a web application that allows users to manage their tasks efficiently. It includes features such as task creation, categorization, and deadline reminders. The main objective is to help users stay organized and increase productivity."
+  "This project is a web API Organized architecture application that allows users to manage their tasks efficiently and more faster way. It includes features such as task creation (CRUD), html-pdf with advanced way, file upload system with multer, API rate-limit control, jwt bearer authentication, module alias way path, Modular categorization Architecture, middleware Group Routing env variable setup, by default database mysql change it any time. The main objective is to help users stay organized and increase productivity light and faster way."
   
   ## ✨ Features
-  
-  - **Task Management**: Create, update, and delete tasks.
-  - **Categorization**: Organize tasks into categories for better management.
-  - **Reminders**: Set deadlines and receive notifications.
+
+  - **Express Route**: you can add full of express feature without interrupt middleware and added route grouping utilities section.
+  - **Task Management**: Create,Read, Update, and Delete tasks.
+  - **html-to-pdf**: Organize html into PDF Downloadable file for better fast management.
+  - **File upload**: Use advanced way file upload system with image file validation.
+  - **Rate-limit**: use rate-limit to more secure api for brute force attack and others inactivities.
+  - **JWT**: use for api secure token Based Authentication.
   - **User Authentication**: Secure login and registration system.
+  - **Module Alias**: use for require path need advanced organized way.
+  - **Modules Architecture**: use modules architecture for build large type of web application without interrupt and the inner module apply CMR architecture (Controller-Model-Routes) it can be customized you get full potential.
+  - **ENV**: ENV variable setup for you can added env variable and customized what you need.
+    - **Database**: By default the database set mysql. you can set 'postgresql' | 'mysql' | 'postgres' | 'sqlite' | 'mariadb' | 'mssql' | 'db2' | 'snowflake' | 'oracle'. also you can add mongodb with mongoose package
   - **Responsive Architecture**: Works on both desktop and mobile devices.
   
   ## 🚀 Getting Started
@@ -42,13 +49,15 @@
   
   ### Installation
   
-  1. Clone the repository:
+  1. Run the Command on git:
   
      ```bash
      npx @iftekher2108/express-recharge project-name
      ```
   
-  2. Install dependencies:
+  
+   if not install by default
+   Install dependencies:
   
      ```bash
      npm install
@@ -58,12 +67,12 @@
      cp - Copy.env .env
      ```
 
-3. Start the development server:
+2. Start the development server:
    ```bash
    npm start
    ```
 
-## 📚 API
+## 📚 DOCS
 
 This section documents the main features of the API. Each Package is described with its package name, return what it's work for clarity.
 

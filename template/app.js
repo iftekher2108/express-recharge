@@ -23,7 +23,7 @@ app.use(
 );
 
 // database
-const db = require("./Config/database");
+const db = require("@config/database");
 
 // database init
 // db.sync({ alter: true }).then(() => {
@@ -32,11 +32,17 @@ const db = require("./Config/database");
 //     console.error('Database sync failed:', err);
 //   });
 
-// modular
-const userRoute = require("./Users/routes/routes");
+// modular path
+const userRoute = require("@modules/Users/routes/routes");
 
-// modular routes
+// modular routes Register
 app.use("/", userRoute);
+
+
+// app.use("/api/v1", (req, res, next) => {
+//   console.log("API v1 route accessed");
+//   next();
+// });
 
 // middleware
 // app.use(middleware)
