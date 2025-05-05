@@ -2,6 +2,7 @@
 /public/build
 /public/hot
 /public/storage
+/package-lock.json
 .env
 /.fleet
 /.idea
