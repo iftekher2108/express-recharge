@@ -1,6 +1,6 @@
 {
   "name": "@iftekher2108/express-recharge",
-  "version": "1.0.8",
+  "version": "1.1.0",
   "description": "Create Express Recharge starter app",
   "bin": {
     "express-recharge": "./bin/index.js"
@@ -48,6 +48,6 @@
     "recharge-automation-express-sequelize",
     "recharge-automation-express-puppeteer"
   ],
-  "author": "iftekher",
+  "author": "iftekher <iftekhermahmud1@gmail.com>",
   "license": "MIT"
 }

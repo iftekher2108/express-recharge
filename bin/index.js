@@ -8,7 +8,7 @@ const projectName = process.argv[2];
 
 console.log("🚀 Welcome to Express Recharge CLI!");
 console.log(
-  "✅ This is working via npx @iftekher2108/express-recharge project-name"
+  `✅ This is working via npx @iftekher2108/express-recharge ${projectName}`
 );
 
 if (!projectName) {
@@ -48,10 +48,11 @@ console.log("📦 Installing dependencies...");
 execSync("npm install", { cwd: targetPath, stdio: "inherit" });
 
 execSync("cp .env.example .env", { cwd: targetPath, stdio: "inherit" });
+execSync(`npm link`, { cwd: targetPath, stdio: "inherit" });
 
 console.log("🚀 Coping -Copy.env file and rename it to .env !");
 console.log("🚀 All done!");
-console.log("You can now start building your Express application!");
+console.log("You can now start building your Express Recharge application!");
 console.log(`👉 cd ${projectName} && npm start`);
 console.log("🚀 Happy coding!");
 console.log("🚀 If you have any questions, feel free to ask!");
