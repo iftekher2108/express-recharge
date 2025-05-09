@@ -1,8 +1,8 @@
 const express = require("express");
 const router = express.Router();
 const limiter = require("@config/rate-limiter");
-const UserController = require("@modules/Users/controller/UserController");
-const Auth = require("@middleware/Auth");
+const UserController = require("@modules/Users/controllers/UserController");
+const Auth = require("@middlewares/Auth");
 const groupRoutes = require("@utils/group_routes");
 const upload = require("@utils/file_system");
 

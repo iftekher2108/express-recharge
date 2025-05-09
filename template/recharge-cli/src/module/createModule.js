@@ -37,7 +37,7 @@ function copyAndReplace(from, to, replacements) {
 }
 
 module.exports = function createModule(name) {
-  const stubPath = path.resolve(__dirname, '../stub');
+  const stubPath = path.resolve(__dirname, '../stub/module');
   const targetPath = path.resolve(process.cwd(), 'Modules', name);
 
   if (fs.existsSync(targetPath)) {

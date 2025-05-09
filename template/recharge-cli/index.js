@@ -26,11 +26,23 @@ module.exports = () => {
 
       break;
     case "make:module":
-      require(path.join(__dirname, "./src/initModule"))(args);
+      require(path.join(__dirname, "./src/module/initModule"))(args);
       break;
+    case "make:middleware":
+        require(path.join(__dirname, "./src/middleware/initMiddleware"))(args);
+        console.log("Middleware creation is not implemented yet.")
+        break;
     case "make:controller":
-        // require(path.join(__dirname, "src/initController"))(args);
+        require(path.join(__dirname, "./src/controller/initController"))(args);
         console.log("Controller creation is not implemented yet.")
+        break;
+    case "make:route":
+        require(path.join(__dirname, "./src/route/initRoute"))(args);
+        console.log("Route creation is not implemented yet.")
+        break;
+    case "make:model":
+        require(path.join(__dirname, "./src/model/initModel"))(args);
+        console.log("Model creation is not implemented yet.")
         break;
     default:
       console.log("❌ Unknown command:", command);
