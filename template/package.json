@@ -8,10 +8,10 @@
   },
   "_moduleAliases": {
     "@utils": "Utilities",
-    "@config": "Config",
-    "@modules": "Modules",
+    "@config": "Configs",
+    "@module": "Modules",
     "@public": "public",
-    "@middleware": "Middleware"
+    "@middleware": "Middlewares"
   },
   "bin": {
     "recharge": "./recharge.js"

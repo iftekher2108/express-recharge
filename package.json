@@ -9,8 +9,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-	"express recharge",
-	"express-recharge",
+    "express recharge",
+    "express-recharge",
     "express",
     "recharge",
     "nodejs",
@@ -23,7 +23,7 @@
     "api",
     "cli",
     "secure-recharge",
-	"api",
+    "api",
     "nodejs",
     "mysql",
     "sequelize",
