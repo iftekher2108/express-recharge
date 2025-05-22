@@ -1,30 +1,28 @@
 const express = require("express");
 const router = express.Router();
-const limiter = require("@config/rate-limiter");
-const UserController = require("@module/Users/controllers/UserController");
+const limiter = require("@middleware/rateLimiter");
+const UserController = require("@module/Users/Controllers/UserController");
+const AuthController = require("@module/Users/Controllers/AuthController");
 const Auth = require("@middleware/Auth");
-const groupRoutes = require("@utils/group_routes");
-const upload = require("@utils/file_system");
+const groupRoute = require("@utils/groupRoute");
+const upload = require("@utils/fileUpload");
 
 router.get("/", (req, res) => {
-  res.json({ msg: "Welcome to the API System" });
+  res.json({ message: "Welcome to the API System" });
 });
 
 // auth login and register
-router.post("/login", UserController.login);
-router.post("/register", UserController.register);
+router.post("/login", AuthController.login);
+router.post("/register", AuthController.register);
 
 // html to pdf generate
 router.get("/pdfgenerate", UserController.pdfgenerate);
-router.post("/file-upload", upload("/").single, UserController.file_upload);
+router.post("/file-upload", upload({ dirPath: "/uploads", fileName: "user_file" }).single('file'), UserController.file_upload);
 
 // middleware before after piority matters
-groupRoutes(router, Auth, (admin) => {
+
+groupRoute(router, Auth, (admin) => {
   admin.get("/dashboard", UserController.dashboard);
-  // admin.get("/post", UserController.post);
-  // admin.post("/user", UserController.user_store);
-  // admin.get("/user", limiter, UserController.user_get);
-  // admin.delete("/user/:id", UserController.user_delete);
 });
 
 module.exports = router;

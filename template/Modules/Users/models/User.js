@@ -14,12 +14,16 @@ User.init(
       primaryKey: true,
       allowNull: false,
     },
+    picture: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
     name: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
         notNull: {
-          msg: "name field is required",
+          message: "name field is required",
         },
       },
     },
@@ -29,10 +33,10 @@ User.init(
       unique: true,
       validate: {
         isEmail: {
-          msg: "email field is not valid",
+          message: "email field is not valid",
         },
         notNull: {
-          msg: "email field is required",
+          message: "email field is required",
         },
       },
     },
@@ -41,11 +45,11 @@ User.init(
       allowNull: false,
       validate: {
         notNull: {
-          msg: "password field is required",
+          message: "password field is required",
         },
         len: {
           args: [8, 64],
-          msg: "password field must be between 8 and 64 characters",
+          message: "password field must be between 8 and 64 characters",
         },
       },
     },

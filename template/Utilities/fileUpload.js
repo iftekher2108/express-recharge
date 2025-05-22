@@ -2,22 +2,38 @@ const multer = require("multer");
 const path = require("path");
 const fs = require("fs");
 
-function upload_file(dir_path = "/") {
+
+/**
+ * Description placeholder
+ *
+ * @param {{ dirPath?: string; fileName?: any; }} param0 
+ * @param {string} [param0.dirPath="/"] 
+ * @param {*} [param0.fileName=null] 
+ * @returns {*} 
+ */
+function uploadFile({ dirPath = "/", fileName = 'file-name' }) {
   const storage = multer.diskStorage({
     destination: async function (req, file, cb) {
-      const dir = path.basename("public") + dir_path;
+      const dir = path.basename("public") + dirPath;
       if (!fs.existsSync(dir)) {
         await fs.mkdirSync(dir, { recursive: true });
       }
       cb(null, dir);
     },
     filename: function (req, file, cb) {
-      const uniqueSuffix = Date.now() + "-" + Math.round(Math.random() * 1e9);
+      const uniqueSuffix = fileName + '-' + Date.now();
       cb(null, uniqueSuffix + path.extname(file.originalname));
     },
   });
 
-  // File type validation
+/**
+ * File filter for uploaded files.
+ *
+ * @param {*} req - The request object.
+ * @param {*} file - The file object.
+ * @param {*} cb - The callback function.
+ * @returns {void}
+ */
   const fileFilter = (req, file, cb) => {
     const allowedTypes = /jpg|jpeg|png|gif|pdf/; // allowed extensions
     const mimeType = allowedTypes.test(file.mimetype); // check mime type
@@ -35,13 +51,15 @@ function upload_file(dir_path = "/") {
   const upload = multer({
     storage: storage,
     limits: { fileSize: 10 * 1024 * 1024 }, // 10MB limit
-    fileFilter: fileFilter, // Optional, if you want to keep file type validation as well
+    // fileFilter: fileFilter, // Optional, if you want to keep file type validation as well
   });
 
-  return {
-    single: upload.single("file"),
-    multiple: upload.array("files", 20), // for multiple files, limit to 20 files
-  };
+  return upload;
+
+  // return {
+  //   single: upload.single("file"),
+  //   multiple: upload.array("files", 20), // for multiple files, limit to 20 files
+  // };
 }
 
-module.exports = upload_file;
+module.exports = uploadFile;
