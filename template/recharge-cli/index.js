@@ -39,21 +39,27 @@ module.exports = () => {
         chalk.white('recharge ') +
         chalk.green('make:controller') +
         chalk.white(' --name=') +
-        chalk.yellow('iftekher')
+        chalk.yellow('example')+
+         chalk.white(' --module=') +
+        chalk.yellow('example')
       );
       console.log(
         chalk.blue('➤ ') +
         chalk.white('recharge ') +
         chalk.green('make:model') +
         chalk.white(' --name=') +
-        chalk.yellow('iftekher')
+        chalk.yellow('iftekher')+
+         chalk.white(' --module=') +
+        chalk.yellow('example')
       );
       console.log(
         chalk.blue('➤ ') +
         chalk.white('recharge ') +
         chalk.green('make:route') +
         chalk.white(' --name=') +
-        chalk.yellow('iftekher')
+        chalk.yellow('iftekher')+
+         chalk.white(' --module=') +
+        chalk.yellow('example')
       );
 
       console.log('\n' + chalk.gray('──────────────────────────────'));
@@ -76,11 +82,9 @@ module.exports = () => {
       break;
     case "make:middleware":
       require(path.join(__dirname, "./src/middleware/initMiddleware"))(args);
-      console.log("Middleware creation is not implemented yet.")
       break;
     case "make:controller":
       require(path.join(__dirname, "./src/controller/initController"))(args);
-      console.log("Controller creation is not implemented yet.")
       break;
     case "make:route":
       require(path.join(__dirname, "./src/route/initRoute"))(args);
@@ -89,6 +93,10 @@ module.exports = () => {
     case "make:model":
       require(path.join(__dirname, "./src/model/initModel"))(args);
       console.log("Model creation is not implemented yet.")
+      break;
+    case "make:service":
+      require(path.join(__dirname, "./src/service/initService"))(args);
+      console.log("Service creation is not implemented yet.")
       break;
     default:
       console.log("❌ Unknown command:", command);

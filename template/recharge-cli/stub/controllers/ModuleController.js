@@ -1,5 +1,4 @@
-// Import the model
-const {{moduleName}} = require("@module/{{moduleName}}/model/{{moduleName}}");
+// import working file
 
 //  show all data
 exports.index = async (req, res) => {

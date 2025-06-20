@@ -1,7 +1,7 @@
 
 
 const {{moduleName}} = (req, res, next) => {
-  console.log(`Module Name: ${req.moduleName}`);
+  console.log(`Module Name: {{moduleName}}`);
   next();
 }
 
