@@ -25,4 +25,9 @@ groupRoute(router, Auth, (admin) => {
   admin.get("/dashboard", UserController.dashboard);
 });
 
+
+// if custom route create define here like
+// const routeName = require('./routeName');
+// router.use('',routeName);
+
 module.exports = router;

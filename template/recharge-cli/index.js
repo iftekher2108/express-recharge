@@ -88,7 +88,6 @@ module.exports = () => {
       break;
     case "make:route":
       require(path.join(__dirname, "./src/route/initRoute"))(args);
-      console.log("Route creation is not implemented yet.")
       break;
     case "make:model":
       require(path.join(__dirname, "./src/model/initModel"))(args);

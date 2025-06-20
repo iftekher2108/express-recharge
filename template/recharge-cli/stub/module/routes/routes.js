@@ -7,4 +7,12 @@ const upload = require("@utils/fileUpload");
 // router.get("/{{moduleName}}", {{moduleName}}Controller.index);
 
 
+
+
+
+// if custom route create define here like
+// const routeName = require('./routeName');
+// router.use('',routeName);
+
+
 module.exports = router ;
