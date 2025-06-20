@@ -66,16 +66,7 @@ module.exports = () => {
       console.log(chalk.white('Version:') + chalk.cyan(' 1.0') + '   ' + chalk.white('Support:') + chalk.cyan(' iftekhermahmud1@gmail.com'));
       console.log(chalk.gray('──────────────────────────────\n'));
 
-      // console.log("Available commands: recharge-cli make:service --name=iftekher");
-      // console.log("Available commands: recharge-cli make:middleware --name=iftekher");
-      // console.log("Available commands: recharge-cli make:validator --name=iftekher");
-      // console.log("Available commands: recharge-cli make:config --name=iftekher");
-      // console.log("Available commands: recharge-cli make:seed --name=iftekher");
-      // console.log("Available commands: recharge-cli make:migration --name=iftekher");
-      // console.log("Available commands: recharge-cli make:job --name=iftekher");
-      // console.log("Available commands: recharge-cli make:queue --name=iftekher");
-      // console.log("Available commands: recharge-cli make:template --name=iftekher");
-
+      
       break;
     case "make:module":
       require(path.join(__dirname, "./src/module/initModule"))(args);
@@ -91,7 +82,6 @@ module.exports = () => {
       break;
     case "make:model":
       require(path.join(__dirname, "./src/model/initModel"))(args);
-      console.log("Model creation is not implemented yet.")
       break;
     case "make:service":
       require(path.join(__dirname, "./src/service/initService"))(args);

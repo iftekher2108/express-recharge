@@ -1,7 +1,6 @@
 const { DataTypes, Model } = require("sequelize");
 const sequelize = require("@config/database");
 
-
 class User extends Model {
   // your can write logic function get set
 }
@@ -57,7 +56,8 @@ User.init(
   {
     sequelize,
     modelName:"user",
-    paranoid: true,
+    // paranoid: true, // if you need to soft delete to your application uncomment this and comment timestamps
+    timestamps: true, 
   }
 
 );
