@@ -96,7 +96,6 @@ module.exports = () => {
       break;
     case "make:service":
       require(path.join(__dirname, "./src/service/initService"))(args);
-      console.log("Service creation is not implemented yet.")
       break;
     default:
       console.log("❌ Unknown command:", command);

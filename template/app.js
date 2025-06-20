@@ -43,4 +43,8 @@ db.sync(
   });
 
 
+const mainRouter = require('./mainRoute')
+app.use('',mainRouter);
+
+
 module.exports = app;
