@@ -55,12 +55,14 @@ module.exports = () => {
       console.log(
         chalk.blue('➤ ') +
         chalk.white('recharge ') +
-        chalk.green('make:route') +
+        chalk.green('make:service') +
         chalk.white(' --name=') +
         chalk.yellow('iftekher')+
          chalk.white(' --module=') +
         chalk.yellow('example')
       );
+
+
 
       console.log('\n' + chalk.gray('──────────────────────────────'));
       console.log(chalk.white('Version:') + chalk.cyan(' 1.0') + '   ' + chalk.white('Support:') + chalk.cyan(' iftekhermahmud1@gmail.com'));
