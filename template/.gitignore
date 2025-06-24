@@ -1,5 +1,6 @@
 /node_modules
 /public/build
+/recharge-cli
 /public/hot
 /public/storage
 /package-lock.json
