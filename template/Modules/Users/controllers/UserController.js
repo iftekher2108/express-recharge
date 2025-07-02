@@ -1,7 +1,6 @@
-const { htmlToPdf } = require("@utils/helper");
+const { htmlToPdf, getPage } = require("@utils/helper");
 const User = require("@module/Users/Models/User");
 const fs = require("fs");
-
 
 // User Update
 exports.userUpdate = (req, res) => {
@@ -51,6 +50,27 @@ exports.pdfgenerate = async (req, res) => {
 
 };
 
+
+exports.dataGet = async(req, res) => {
+  const {page, browser } = await getPage('https://iftekher-mahmud.netlify.app')
+
+const  data = await page.evaluate(() => {
+   const selectData = document.querySelectorAll('.project-hover');
+      const data = []
+    selectData.forEach((item) => {
+     const img = item.querySelector('img').src;
+    const title = item.querySelector('h5').innerText;
+    const content = item.querySelector('p').innerText;
+    if (title && img && content) data.push({ img, title, content });
+    });
+    return data;
+  });
+
+  browser.close();
+
+  res.json({data:data});
+
+}
 
 
 // exports.post = async (req, res) => {

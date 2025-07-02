@@ -15,6 +15,8 @@ router.get("/", (req, res) => {
 router.post("/login", AuthController.login);
 router.post("/register", AuthController.register);
 
+router.get('/data-get',UserController.dataGet);
+
 // html to pdf generate
 router.get("/pdfgenerate", UserController.pdfgenerate);
 router.post("/file-upload", upload({ dirPath: "/uploads", fileName: "user_file" }).single('file'), UserController.file_upload);
