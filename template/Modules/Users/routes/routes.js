@@ -15,17 +15,22 @@ router.get("/", (req, res) => {
 router.post("/login", AuthController.login);
 router.post("/register", AuthController.register);
 
-router.get('/data-get',UserController.dataGet);
 
 // html to pdf generate
-router.get("/pdfgenerate", UserController.pdfgenerate);
-router.post("/file-upload", upload({ dirPath: "/uploads", fileName: "user_file" }).single('file'), UserController.file_upload);
+// router.post("
+// /file-upload",
+//  upload({ dirPath: "/uploads", fileName: "user_file" }).single('file'),
+//  UserController.fileUpload);
+
+// router.get("/pdfgenerate", UserController.pdfGenerate);
+// router.get('/scrape-data-get',UserController.scrapeDataGet);
+
 
 // middleware before after piority matters
 
-groupRoute(router, Auth, (admin) => {
-  admin.get("/dashboard", UserController.dashboard);
-});
+// groupRoute(router, Auth, (admin) => {
+//   admin.get("/users", UserController.dashboard);
+// });
 
 
 // if custom route create define here like

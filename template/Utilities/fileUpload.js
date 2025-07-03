@@ -34,19 +34,19 @@ function uploadFile({ dirPath = "/", fileName = 'file-name' }) {
  * @param {*} cb - The callback function.
  * @returns {void}
  */
-  const fileFilter = (req, file, cb) => {
-    const allowedTypes = /jpg|jpeg|png|gif|pdf/; // allowed extensions
-    const mimeType = allowedTypes.test(file.mimetype); // check mime type
-    const extName = allowedTypes.test(
-      file.originalname.split(".").pop().toLowerCase()
-    ); // check extension
+  // const fileFilter = (req, file, cb) => {
+  //   const allowedTypes = /jpg|jpeg|png|gif|pdf/; // allowed extensions
+  //   const mimeType = allowedTypes.test(file.mimetype); // check mime type
+  //   const extName = allowedTypes.test(
+  //     file.originalname.split(".").pop().toLowerCase()
+  //   ); // check extension
 
-    if (mimeType && extName) {
-      return cb(null, true); // allow the file
-    } else {
-      cb(new Error("Only .jpg, .png, .gif, .pdf files are allowed"), false); // reject the file
-    }
-  };
+  //   if (mimeType && extName) {
+  //     return cb(null, true); // allow the file
+  //   } else {
+  //     cb(new Error("Only .jpg, .png, .gif, .pdf files are allowed"), false); // reject the file
+  //   }
+  // };
 
   const upload = multer({
     storage: storage,

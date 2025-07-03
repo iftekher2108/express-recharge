@@ -6,9 +6,13 @@ const express = require("express");
  * @param {Function} middleware - The middleware to apply to the grouped routes
  * @param {Function} callback - A function that takes the grouped router as an argument
  */
-const GroupRoute = (router, middleware, callback) => {
+const GroupRoute = (router, middlewares, callback) => {
   const groupedRouter = express.Router();
   callback(groupedRouter);
-  router.use(middleware, groupedRouter);
+  // Ensure middlewares is always an array
+  if (!Array.isArray(middlewares)) {
+    middlewares = [middlewares];
+  }
+  router.use(...middlewares, groupedRouter);
 };
 module.exports = GroupRoute;

@@ -1,6 +1,7 @@
 {
   "name": "express-recharge",
   "version": "1.0.0",
+  "description": "Create Express Recharge starter app",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -16,36 +17,8 @@
   "bin": {
     "recharge": "./recharge.js"
   },
-  "keywords": [
-    "api",
-    "nodejs",
-    "mysql",
-    "sequelize",
-    "puppeteer",
-    "express",
-    "recharge",
-    "express-recharge",
-    "recharge-api",
-    "recharge-nodejs",
-    "recharge-mysql",
-    "recharge-sequelize",
-    "recharge-puppeteer",
-    "recharge-automation",
-    "recharge-automation-api",
-    "recharge-automation-nodejs",
-    "recharge-automation-mysql",
-    "recharge-automation-sequelize",
-    "recharge-automation-puppeteer",
-    "recharge-automation-express",
-    "recharge-automation-express-api",
-    "recharge-automation-express-nodejs",
-    "recharge-automation-express-mysql",
-    "recharge-automation-express-sequelize",
-    "recharge-automation-express-puppeteer"
-  ],
   "author": "iftekher",
   "license": "MIT",
-  "description": "",
   "dependencies": {
     "bcryptjs": "^3.0.2",
     "cors": "^2.8.5",
