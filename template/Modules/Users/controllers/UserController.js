@@ -1,4 +1,4 @@
-const { htmlToPdf, getPage } = require("@utils/helper");
+const { htmlToPdf, getPage } = require("recharge-utils");
 const User = require("@module/Users/Models/User");
 const fs = require("fs");
 

@@ -1,11 +1,10 @@
 const express = require("express");
 const router = express.Router();
-const limiter = require("@middleware/rateLimiter");
-const UserController = require("@module/Users/Controllers/UserController");
+// const limiter = require("@middleware/rateLimiter");
+// const Auth = require("@middleware/Auth");
+// const UserController = require("@module/Users/Controllers/UserController");
+// const  { groupRoute, uploadFile } = require("recharge-utils");
 const AuthController = require("@module/Users/Controllers/AuthController");
-const Auth = require("@middleware/Auth");
-const groupRoute = require("@utils/groupRoute");
-const upload = require("@utils/fileUpload");
 
 router.get("/", (req, res) => {
   res.json({ message: "Welcome to the API System" });
@@ -19,7 +18,7 @@ router.post("/register", AuthController.register);
 // html to pdf generate
 // router.post("
 // /file-upload",
-//  upload({ dirPath: "/uploads", fileName: "user_file" }).single('file'),
+//  uploadFile({ dirPath: "/uploads", fileName: "user_file" }).single('file'),
 //  UserController.fileUpload);
 
 // router.get("/pdfgenerate", UserController.pdfGenerate);

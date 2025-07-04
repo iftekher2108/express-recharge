@@ -6,7 +6,6 @@ const path = require('path');
 const moduleAlias = require('module-alias');
 const basePath = __dirname;
 moduleAlias.addAliases({
-  '@utils': path.resolve(basePath, 'Utilities'),
   '@config': path.resolve(basePath, 'Configs'),
   '@module': path.resolve(basePath, 'Modules'),
   '@public': path.resolve(basePath, 'public'),

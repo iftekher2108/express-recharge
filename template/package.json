@@ -8,7 +8,6 @@
     "start": "nodemon server.js"
   },
   "_moduleAliases": {
-    "@utils": "Utilities",
     "@config": "Configs",
     "@module": "Modules",
     "@public": "public",
@@ -34,7 +33,8 @@
     "puppeteer": "^24.11.2",
     "puppeteer-extra": "^3.3.6",
     "puppeteer-extra-plugin-stealth": "^2.11.2",
-    "recharge-cli": "^1.0.5",
+    "recharge-cli": "^1.0.52",
+    "recharge-utils": "^1.0.0",
     "sequelize": "^6.37.7"
   }
 }

@@ -1,10 +1,10 @@
 // there is your business service repository functional logics
 
-const hello = async() => {
+const userGet = async() => {
     console.log('service repository business logic');
 }
 
 
 module.exports = {
-    hello,
+    userGet,
 }

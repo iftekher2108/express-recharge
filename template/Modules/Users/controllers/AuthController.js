@@ -1,5 +1,5 @@
 const bcrypt = require("bcryptjs");
-const { generateToken } = require("@utils/jwt");
+const { generateToken } = require("recharge-utils");
 const User = require("@module/Users/Models/User");
 
 
