@@ -2,7 +2,7 @@
     
   # Express Recharge
   
-  <img src="https://api.dicebear.com/9.x/icons/svg?seed=Midnight&backgroundColor[]&icon=lightbulb" height="100" alt="avatar" />
+  <!-- <img src="https://api.dicebear.com/9.x/icons/svg?seed=Midnight&backgroundColor[]&icon=lightbulb" height="100" alt="avatar" /> -->
   
   [Overview](#🎯-overview) •
   [Features](#✨-features) •
@@ -58,6 +58,11 @@
   
    if not install by default
    Install dependencies:
+
+     ```bash
+     cd project-name
+     ```
+
   
      ```bash
      npm install
@@ -65,6 +70,10 @@
 
       ```bash
      cp - Copy.env .env
+     ```
+
+        ```bash
+     mkdir public
      ```
 
 2. Start the development server:
