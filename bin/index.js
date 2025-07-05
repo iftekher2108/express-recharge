@@ -44,16 +44,11 @@ copyRecursive(templatePath, targetPath);
 
 console.log(`✅ Project '${projectName}' created successfully!`);
 console.log("📦 Installing dependencies...");
-
-execSync("npm install", { cwd: targetPath, stdio: "inherit" });
-if(!(targetPath + "/public")) {
-  execSync('mkdir public',{ cwd: targetPath, stdio: "inherit" });
-}
-
+execSync("npm install", { cwd: targetPath, stdio: "inherit" })
 execSync(`npm link`, { cwd: targetPath, stdio: "inherit" });
 console.log("🚀 Coping -Copy.env file and rename it to .env !");
 execSync("cp .env.example .env", { cwd: targetPath, stdio: "inherit" });
-
+console.log('now need to create a public folder for storage files')
 console.log("🚀 All done!");
 console.log("You can now start building your Express Recharge application!");
 console.log(`👉 cd ${projectName} && npm start`);
